@@ -5,7 +5,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 CDN="https://images.squarespace-cdn.com/content/v1/6724c7a0bca70a27ee2e67bd/"
-grep -rhoE '\{\{IMG\}\}[^"'"'"')]+' src build.py | sed 's/{{IMG}}//' | sort -u | while read -r p; do
+# Every {{IMG}}<path> in the pages (and the logo in build.py, written as {{{{IMG}}}}<path>)
+grep -rhoE 'IMG\}\}+[A-Za-z0-9][^"'"'"') ]*' src build.py | sed -E 's/^IMG\}+//' | sort -u | while read -r p; do
   out="src/assets/images/$p"
   [ -f "$out" ] && continue
   mkdir -p "$(dirname "$out")"
