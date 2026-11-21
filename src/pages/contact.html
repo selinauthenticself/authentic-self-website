@@ -1,0 +1,76 @@
+<!-- {"path": "/contact", "title": "Hypnotherapy in Byron Bay | Authentic Self Hypnotherapy", "description": "Hypnotherapy in Byron Bay"} -->
+
+<section class="section bg-cream has-bg page-hero" style="--bg:url('{{IMG}}1730463654173-PM7U836214W0W663R3EP/leaves-1.jpg');--bg-opacity:.15;min-height:340px">
+  <div class="inner narrow"><h1>Contact Me</h1></div>
+</section>
+
+<section class="section bg-white">
+  <div class="inner grid-2" style="align-items:start;max-width:1100px">
+    <div>
+      <h4><a href="mailto:info@authenticselfhypnotherapy.com.au">info@authenticselfhypnotherapy.com.au</a></h4>
+      <h4><a href="tel:+61466480926">+61 (0) 4 66 480 926</a></h4>
+      <p style="margin:1.5rem 0"><a class="btn" href="tel:+61466480926">Call</a></p>
+      <h4>2/4 Ti-Tree Place, Byron Bay, 2481, Australia</h4>
+      <p class="small">My contact details are provided solely to answer questions about my hypnotherapy services and appointment-related inquiries. Unsolicited messages, including sales offers or unrelated inquiries are not welcome; as a matter of ethical policy, I never engage with such requests when they come through my website, without exception.</p>
+      <iframe class="map" style="height:340px" title="Map: 2/4 Ti-Tree Place, Byron Bay" loading="lazy" src="https://maps.google.com/maps?q=2%2F4%20Ti-Tree%20Place%2C%20Byron%20Bay%20NSW%202481&z=15&output=embed"></iframe>
+    </div>
+    <!-- CONTACT FORM: sent by Web3Forms to info@authenticselfhypnotherapy.com.au.
+         The access key is set as WEB3FORMS_ACCESS_KEY in build.py. -->
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{FORM_KEY}}">
+      <input type="hidden" name="subject" value="CRITICAL New message from the Authentic Self website">
+      <input type="hidden" name="from_name" value="Authentic Self Hypnotherapy website">
+      <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p style="margin:0">Name <span class="form-note">(required)</span></p>
+      <div class="row">
+        <div><label for="c-f">First Name</label><input id="c-f" name="first_name" autocomplete="given-name" required></div>
+        <div><label for="c-l">Last Name</label><input id="c-l" name="last_name" autocomplete="family-name" required></div>
+      </div>
+      <label for="c-e">Email (required)</label><input id="c-e" name="email" type="email" autocomplete="email" required>
+      <label for="c-p">Phone (required)</label><input id="c-p" name="phone" type="tel" autocomplete="tel" required>
+      <label for="c-m">Message (required)</label><textarea id="c-m" name="message" required></textarea>
+      <label for="c-s">How did you find us?</label>
+      <select id="c-s" name="source">
+        <option value="">Select an option</option>
+        <option>Google Maps</option><option>Google Search</option><option>Byron Healing Magazine</option>
+        <option>Flyers/Business Card</option><option>Byron Baby</option><option>Client referral</option><option>Other</option>
+      </select>
+      <p style="margin-top:1.5rem"><button class="btn" type="submit">Send</button></p>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+    <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      var status = form.querySelector('.form-status');
+      var button = form.querySelector('button[type=submit]');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.access_key.value || form.access_key.value.indexOf('{{') === 0) {
+          status.textContent = 'The contact form is not connected yet. Please email info@authenticselfhypnotherapy.com.au.';
+          return;
+        }
+        button.disabled = true; button.textContent = 'Sending...';
+        status.textContent = '';
+        fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.success) {
+              form.reset();
+              status.textContent = 'Thank you! Your message has been sent. I will get back to you soon.';
+            } else {
+              status.textContent = 'Sorry, something went wrong. Please email info@authenticselfhypnotherapy.com.au.';
+            }
+          })
+          .catch(function () { status.textContent = 'Sorry, something went wrong. Please email info@authenticselfhypnotherapy.com.au.'; })
+          .then(function () { button.disabled = false; button.textContent = 'Send'; });
+      });
+    })();
+    </script>
+  </div>
+</section>
+
+<section class="section bg-white">
+  <div class="inner narrow center">
+    <h3 class="acknowledgement">We acknowledge and pay our respects to the <strong>Arakwal</strong> people, traditional custodians of the <strong>Byron Bay</strong> area, past, present, and emerging. We recognize their continuing connection to land, waters, and culture and honor their ongoing contribution to this region.</h3>
+  </div>
+</section>
