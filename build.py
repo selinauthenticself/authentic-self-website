@@ -98,6 +98,10 @@ def layout(meta, body):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Mulish:wght@400;700&family=Outfit:wght@300&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 {ADOBE}<link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
@@ -136,6 +140,7 @@ def build():
     if OUT.exists():
         shutil.rmtree(OUT)
     shutil.copytree(SRC / "assets", OUT / "assets")
+    shutil.copy(SRC / "assets" / "icons" / "favicon.ico", OUT / "favicon.ico")
     urls = []
     for page in sorted((SRC / "pages").glob("*.html")):
         text = page.read_text()
