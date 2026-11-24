@@ -55,7 +55,7 @@ def header(path):
 </div></header>"""
 
 
-NEWSLETTER = """<section class="section bg-cream newsletter"><div class="inner">
+NEWSLETTER = """<section class="section bg-cream newsletter" id="newsletter"><div class="inner">
   <h2>A Gentle Way to Kickstart Your Hypnosis Journey</h2>
   <p>Sign up below to get my free guide with journaling prompts to help you find your top priority for hypnosis.</p>
   <form class="newsletter-form" action="/thank-you" onsubmit="event.preventDefault(); window.location.href = this.getAttribute('action');">
