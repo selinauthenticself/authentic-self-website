@@ -39,7 +39,7 @@ ADOBE_FONTS_ID = "hfx0nru"
 # (create one free at https://web3forms.com - the key arrives by email).
 WEB3FORMS_ACCESS_KEY = "52ffef0f-b6fe-453b-80e9-9fab325dd59b"
 
-NAV = [("About", "/about"), ("Packages", "/#offerings"), ("Book Now", "/private-sessions"),
+NAV = [("Meet Selin", "/about"), ("Packages", "/#offerings"), ("Book Now", "/private-sessions"),
        ("Testimonials", "/testimonials"), ("Contact", "/contact"), ("Blog", "/blog")]
 
 
