@@ -268,3 +268,21 @@ textarea { min-height: 140px; }
 .ct-list a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .ct-list svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 @media (max-width: 900px) { .follow img { width: 100%; flex-basis: 100%; } .find-us iframe { height: 320px; } }
+
+/* Menu link to Offerings on the home page: stop the sticky menu covering the heading */
+#offerings { scroll-margin-top: 140px; }
+/* Keep every menu item on one line now there is a Book Now item */
+.nav a { white-space: nowrap; }
+@media (max-width: 1380px) and (min-width: 901px) {
+  .site-header .inner { gap: 1.2rem; }
+  .logo img { width: 230px; }
+  .nav { gap: 1.25rem; }
+  .nav a { font-size: 1.05rem; }
+  .nav a.btn { font-size: 13.5px; padding: 17px 22px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .logo img { width: 180px; }
+  .nav { gap: .9rem; }
+  .nav a { font-size: .95rem; }
+  .nav a.btn { font-size: 12.5px; padding: 15px 16px; }
+}
