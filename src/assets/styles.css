@@ -177,20 +177,19 @@ textarea { min-height: 140px; }
 .newsletter-form input { width: 280px; height: 66px; padding: 22.4px 32px; font-size: 17.92px; border: 1px solid rgba(0,0,0,.12); background: #fff; color: #000; }
 .newsletter-form input::placeholder { color: #757575; }
 .newsletter-form .btn { padding: 22.4px 32px; height: 64px; }
-/* Footer: measured from the Squarespace site at 1280px wide (positions within its 1126px content area) */
-.site-footer { background: var(--brick); color: #fff; padding: 0 6vw; }
-.site-footer a { color: #fff; text-decoration: none; }
-.footer-grid { position: relative; max-width: 1126px; height: 286px; margin: 0 auto; }
-.footer-grid > * { position: absolute; margin: 0; }
-.f-contact { left: 4.17%; top: 42px; width: 70.6%; height: 59px; display: flex; align-items: center; justify-content: center; font-size: 17.92px; }
-.f-sep { margin: 0 .9em 0 1.1em; }
-.f-call { left: 67.32%; top: 42px; width: 15.9%; height: 59px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 30.4px; background: var(--sand); color: #fff; border-radius: 16px 0; font-weight: var(--body-bold); font-size: 14.08px; letter-spacing: 1.1264px; text-transform: uppercase; line-height: 1.4; }
-.f-link { top: 113px; height: 61px; display: flex; align-items: flex-start; font-size: 17.92px; line-height: 1.7; }
-.f-about { left: 21.05%; width: 11.63%; }
-.f-packages { left: 33.66%; width: 11.63%; }
-.f-terms { left: 46.27%; width: 15.9%; }
-.f-contact-link { left: 67.32%; width: 11.63%; }
-.f-link:hover { opacity: .8; }
+/* Footer: list layout in the style of the Bloom Yoga footer */
+.site-footer { background: #fff; color: var(--text); padding: 52px 6vw; }
+.footer-inner { max-width: 1126px; margin: 0 auto; display: grid; grid-template-columns: auto auto auto; justify-content: space-between; column-gap: 48px; align-items: center; }
+.f-logo img { width: 190px; height: auto; display: block; }
+.f-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 16px; line-height: 1.5; }
+.f-list li { display: flex; align-items: center; gap: 10px; }
+.f-list a { color: var(--brick); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.f-list a:hover { opacity: .8; }
+.f-icon { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.f-legal { justify-self: end; text-align: right; font-size: 14px; display: grid; gap: 8px; }
+.f-copy { margin: 0; opacity: .9; white-space: nowrap; }
+.f-legal a { color: var(--brick); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.f-legal a:hover { opacity: .8; }
 
 /* Sign-up section spacing, as on the Squarespace site */
 .section.newsletter { padding: 42px 6vw 110px; }
@@ -211,6 +210,8 @@ textarea { min-height: 140px; }
   .nav { gap: 1.3rem; }
   .nav a { font-size: 1.05rem; }
   .nav a.btn { font-size: 14.08px; padding: 19px 26px; }
+  .footer-inner { column-gap: 40px; }
+  .f-logo img { width: 160px; }
 }
 
 /* Mobile */
@@ -221,10 +222,8 @@ textarea { min-height: 140px; }
   .hero, .grid-2, .grid-3, .grid-rave, .step, .struggles, .offerings-list, .thank-you-grid { grid-template-columns: 1fr; }
   .offset { margin-top: 0; }
   .newsletter-form input { width: 100%; }
-  .footer-grid { height: auto; padding: 2.5rem 0; display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
-  .footer-grid > * { position: static; width: auto !important; height: auto; }
-  .f-contact { flex-wrap: wrap; }
-  .f-call { padding: 19px 30px; }
+  .footer-inner { grid-template-columns: 1fr; row-gap: 28px; justify-items: start; }
+  .f-legal { justify-self: start; text-align: left; }
   .hero { padding: 0; }
   .hero-photo { justify-self: center; }
   .team { grid-template-columns: 1fr; }

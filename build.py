@@ -66,14 +66,21 @@ NEWSLETTER = """<section class="section bg-cream newsletter"><div class="inner">
   </form>
 </div></section>"""
 
-FOOTER = """<footer class="site-footer"><div class="footer-grid">
-  <p class="f-contact">Byron Bay/Online<span class="f-sep">|</span><a href="mailto:info@authenticselfhypnotherapy.com.au">info@authenticselfhypnotherapy.com.au</a></p>
-  <a class="f-call" href="tel:+61466480926">Click to Call</a>
-  <a class="f-link f-about" href="/about">About</a>
-  <a class="f-link f-packages" href="/private-sessions">Packages</a>
-  <a class="f-link f-terms" href="/terms-and-conditions">Terms and Conditions</a>
-  <a class="f-link f-contact-link" href="/contact">Contact</a>
-</div></footer>"""
+FOOTER = """<footer class="site-footer"><div class="footer-inner">
+  <a class="f-logo" href="/"><img src="{{IMG}}d3558367-4b30-4348-bc7f-907a6c262d22/logo_txt_brick.png" alt="Authentic Self Hypnotherapy" loading="lazy"></a>
+  <ul class="f-list">
+    <li><svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>2/4 Ti-Tree Place, Byron Bay NSW 2481 or Online</span></li>
+    <li><svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><a href="/">www.authenticselfhypnotherapy.com.au</a></li>
+    <li><svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:info@authenticselfhypnotherapy.com.au">info@authenticselfhypnotherapy.com.au</a></li>
+    <li><svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+61466480926" aria-label="Click to call 0466 480 926">0466 480 926</a></li>
+    <li><svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg><a href="https://www.instagram.com/selinonthemind/" target="_blank" rel="noopener">@selinonthemind</a></li>
+    <li><svg class="f-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M15.5 8H14a2 2 0 0 0-2 2v11M9.5 13h5"/></svg><a href="https://www.facebook.com/authenticselfhypnotherapy" target="_blank" rel="noopener">Facebook</a></li>
+  </ul>
+  <div class="f-legal">
+    <p class="f-copy">&copy; <span id="f-year">2026</span> Authentic Self Hypnotherapy</p>
+    <a href="/terms-and-conditions">Terms and Conditions</a>
+  </div>
+</div><script>document.getElementById('f-year').textContent=new Date().getFullYear()</script></footer>"""
 
 
 def layout(meta, body):
