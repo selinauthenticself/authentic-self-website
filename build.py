@@ -58,12 +58,25 @@ def header(path):
 NEWSLETTER = """<section class="section bg-cream newsletter" id="newsletter"><div class="inner">
   <h2>A Gentle Way to Kickstart Your Hypnosis Journey</h2>
   <p>Sign up below to get my free guide with journaling prompts to help you find your top priority for hypnosis.</p>
-  <form class="newsletter-form" action="/thank-you" onsubmit="event.preventDefault(); window.location.href = this.getAttribute('action');">
-    <label class="visually-hidden" for="nl-f">First Name</label><input id="nl-f" name="fname" placeholder="First Name" autocomplete="given-name">
-    <label class="visually-hidden" for="nl-l">Last Name</label><input id="nl-l" name="lname" placeholder="Last Name" autocomplete="family-name">
-    <label class="visually-hidden" for="nl-e">Email Address</label><input id="nl-e" name="email" type="email" placeholder="Email Address" autocomplete="email" required>
+  <form class="newsletter-form" action="https://selinebeci.us16.list-manage.com/subscribe/post?u=f549ac23043f98370c7117e14&amp;id=ecdef49bb0" method="post" target="mc-frame" data-thanks="/thank-you">
+    <label class="visually-hidden" for="nl-f">First Name</label><input id="nl-f" name="FNAME" placeholder="First Name" autocomplete="given-name">
+    <label class="visually-hidden" for="nl-l">Last Name</label><input id="nl-l" name="LNAME" placeholder="Last Name" autocomplete="family-name">
+    <label class="visually-hidden" for="nl-e">Email Address</label><input id="nl-e" name="EMAIL" type="email" placeholder="Email Address" autocomplete="email" required>
+    <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_f549ac23043f98370c7117e14_ecdef49bb0" tabindex="-1" value=""></div>
     <button class="btn" type="submit">Download</button>
   </form>
+  <iframe name="mc-frame" title="Sign-up" hidden></iframe>
+  <script>
+  document.querySelectorAll('.newsletter-form').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      var btn = form.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending…';
+      var frame = document.querySelector('iframe[name="mc-frame"]'), done = false;
+      function go() { if (!done) { done = true; window.location.href = form.getAttribute('data-thanks'); } }
+      frame.addEventListener('load', go, { once: true });
+      setTimeout(go, 4000);
+    });
+  });
+  </script>
 </div></section>"""
 
 FOOTER = """<footer class="site-footer"><div class="footer-inner">
