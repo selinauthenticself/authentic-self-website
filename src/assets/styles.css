@@ -80,6 +80,7 @@ p { margin: 0 0 1em; }
 .icon-col img { width: 100%; height: auto; aspect-ratio: 368 / 130; object-fit: cover; object-position: 50% 50%; margin: 0 0 2rem; }
 
 .grid-rave { display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
+.grid-rave.rave-solo { grid-template-columns: 1fr; max-width: 760px; margin-inline: auto; text-align: center; }
 .offset { margin-top: 6rem; }
 
 /* Chart + 'Struggling to quit...' questions: chart on the left, questions centred beside it */
@@ -120,6 +121,25 @@ figcaption { font-size: 17.92px; line-height: 1.3; }
 .card h3 { font-family: var(--body-font); font-weight: var(--body-weight); font-size: 20px; line-height: 1.2; margin: .9rem 0 .3rem; }
 .cards.grid-list h3 { font-family: var(--heading-font); font-weight: 300; font-size: 17.92px; line-height: 1.4; }
 .cards.blog-list h3 { font-family: var(--heading-font); font-weight: 300; font-size: clamp(24px, 2.45vw, 31.36px); line-height: 1.4; }
+/* Video testimonials: play in place, same structure as selinebeci.com */
+.voices-head { text-align: center; max-width: 720px; margin: 0 auto; }
+.voices-label { display: inline-block; text-transform: uppercase; letter-spacing: .14em; font-weight: var(--body-bold, 800); font-size: 13px; margin-bottom: 1rem; color: var(--brick); }
+.voices-head h2 { margin: 0 0 .6rem; }
+.voices-head p { margin: 0; }
+.quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 2.6rem; }
+.quote { background: #fff; padding: 34px; border-radius: 16px 0; margin: 0; }
+.quote blockquote { margin: 0 0 1rem; font-family: var(--heading-font); font-weight: 300; font-size: 1.25rem; line-height: 1.5; font-style: normal; }
+.quote figcaption { font-weight: var(--body-bold, 800); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--brick); }
+.reviews-link { margin-top: 2.2rem; }
+.reviews-link a { text-decoration: none; }
+.reviews-link .stars { color: var(--brick); letter-spacing: 2px; margin-right: 6px; }
+@media (max-width: 700px) { .quotes { grid-template-columns: 1fr; } }
+.video-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; margin-top: 2.2rem; }
+.video-card video { width: 100%; aspect-ratio: 3 / 4; object-fit: contain; background: var(--text, #5b514c); border-radius: 16px 0; display: block; }
+.video-card h3 { font-family: var(--heading-font); font-weight: 300; font-size: 19px; line-height: 1.3; margin: 14px 0 4px; }
+.video-card p { font-size: 14px; line-height: 1.45; margin: 0; opacity: .85; }
+@media (max-width: 1180px) { .video-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
 .card .meta { font-size: 14px; line-height: 1.4; opacity: .85; }
 .cards.grid-list .meta, .cards.blog-list .meta { font-size: 16px; }
 .cards.blog-list p { font-size: 17.92px; }
